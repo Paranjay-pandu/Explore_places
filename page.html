@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            font-family: sans-serif;
+        }
+        #main{
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://images.unsplash.com/photo-1523833082115-1e8e294bd14e?q=80&w=1895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #content{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.422);
+            backdrop-filter: blur(5px);
+        }
+        #data{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 0;
+            flex-direction: column;
+        }
+        #data h1{
+            font-weight: 200;
+            color: rgb(112, 201, 196);
+        }
+        ::selection{
+            color: white;
+        }
+        #data p{
+            color: white;
+            margin: 30px 0;
+            text-align: center;
+        }
+        #data .btn{
+            background-color: lightseagreen;
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: none;
+        }
+        #data .btn:hover{
+            background-color: rgb(117, 176, 239);
+            color: rgba(7, 5, 5, 0.79);
+            transition: all ease 300ms;
+        }
+        .btn a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="content">
+            <div id="data">
+                <h1>Welcome to Airline reservation system</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum deserunt magnam fugiat hic reiciendis doloribus, eius corporis perferendis ratione obcaecati, saepe magni, iure repellat. Molestiae voluptatem explicabo facere doloribus minima hic nisi. Quasi laudantium delectus laboriosam ad ab aspernatur blanditiis nisi repudiandae iste reiciendis maiores, voluptatibus, impedit, cum nam.</p>
+                <button class="btn"><a target="_blank" href="https://www.makemytrip.com/?srsltid=AfmBOoqYweveRYRO_-Z8Rm2ApxibokWv2IMoA_OQrr8xnoJOxncUL6B2">Book Now</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

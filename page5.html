@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css    ">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            font-family: sans-serif;
+            overflow-x: hidden;
+            font-family: sans-serif;
+        }
+        html *{
+            
+            cursor: none;
+        }
+        #main{
+            width: 100vw;
+            min-height: 100vh;
+            background: linear-gradient(to top left, rgb(72, 190, 213), rgb(32, 52, 134));
+            /* background-image: url(https://plus.unsplash.com/premium_photo-1694475335011-c2d9e97b1714?q=80&w=1778&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size:contain;
+            background-position: top; */
+        }
+        #main h1{
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-weight: 300;
+        }
+        #main #cards{
+            min-height: 80vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+        }
+        #main #cards #card{
+            margin: 80px 0;
+            border: 1px solid black;
+            border-radius: 15px;
+            height: 80vh;
+            width: 20vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 10px;
+            background-color: white;
+        }
+        #card img{
+            height: 65%;
+            width: 90%;
+            margin-bottom: 50px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+        }
+        #card p{
+            text-align: justify;
+            text-indent: 40px;
+        }
+        #card .btn{
+            background-color: lightblue;
+            margin: 80px 0;
+            padding: 10px 30px;
+            border-radius: 30px;
+            transition: all ease 500ms;
+            position: absolute;
+            bottom: -16%;
+        }
+        #card .btn:hover{
+            transform: scale(1.07);
+            background-color: rgb(103, 199, 231);
+        }
+        #cursor{
+            height: 10px;
+            width: 10px;
+            position: fixed;
+            z-index: 9;
+            background-color: black;
+            border-radius: 50%;
+            pointer-events: none;
+            font-size: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        #loading{
+            background-color: black;
+            z-index: 9;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="loading"></div>
+
+    <div id="main" data-scroll-container>
+        <h1>Our Bestsellers</h1>
+        <div id="cards">
+            <div id="card" data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1632032756642-6fcdb3ac53b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1696941515998-d83f24967aca?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1649699745028-3d472babd031?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div><div id="card" data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1632032756642-6fcdb3ac53b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1696941515998-d83f24967aca?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1649699745028-3d472babd031?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div><div id="card" data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1632032756642-6fcdb3ac53b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1696941515998-d83f24967aca?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1649699745028-3d472babd031?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div><div id="card" data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1632032756642-6fcdb3ac53b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1696941515998-d83f24967aca?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card"  data-scroll data-scroll-speed="1.5">
+                <img src="https://images.unsplash.com/photo-1649699745028-3d472babd031?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div id="card" data-scroll data-scroll-speed="-1.5">
+                <img src="https://images.unsplash.com/photo-1692964808433-a7f9554c3f24?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, perspiciatis amet velit excepturi dignissimos officia aut veniam iure laudantium optio?</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script2.js"></script>
+</body>
+</html>

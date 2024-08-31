@@ -1,0 +1,164 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #main {
+            margin: 10px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main * {
+            border: 1px solid black;
+        }
+
+        #main #header {
+            text-align: center;
+            padding: 20px;
+            background-color: orange;
+        }
+        #main #header h1{
+            border: none;
+        }
+        #main #tags{
+            background-color: yellow;
+            border-top: none;
+            border-bottom: none;
+        }
+        #main #mar{
+            background-color: green;
+            border-top: none;
+            border-bottom: none;
+        }
+        #section {
+            display: flex;
+            border: none;
+        }
+        #section #left{
+            background-color: lavender;
+            position: relative;
+            width: 70vw;
+            border: none;
+        }
+        #section #left h1{
+            text-align: center;
+            border: none;
+            border-left: 1px solid #000;
+        }
+        #section #left img{
+            height: 30vh;
+            width: 12vw;
+            float: left;
+            margin-right: 10px;
+            border: none;
+        }
+        #section #left p{
+            text-align: justify;
+            padding-right: 10px;
+        }
+        #section #right{
+            position: relative;
+            width: 30vw;
+            display: flex;
+            border-left: none;
+            flex-direction: column;
+            align-items: center ;
+            border-top: none;
+            border-bottom: none;
+            background-color: rgba(119, 80, 119, 0.393);
+        }
+        #section #right h1{
+            text-align: center;
+            width: 100%;
+        }
+        #section #right img{
+            height: 10vh;
+            width: 6vw;
+            border: none;
+        }
+        #section #right marquee{
+            position: relative;
+            width: 40%;
+            height: 89%;
+            text-align: center;
+            white-space: nowrap;
+            border: none;
+        } 
+        #section #right p{
+            border: none;
+        }
+        #footer{
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.3em;
+            background-color: orange;
+        }
+        #footer h1{
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <h1>Online Exam system</h1>
+        </div>
+        <div id="tags">
+            <pre>Home | Class | Work | Exam</pre>
+        </div>
+        <div id="mar">
+            <marquee direction="left">Exam</marquee>
+        </div>
+        <div id="section">
+
+            <div id="left">
+                <h1>Heading</h1>
+                <p><img src="https://images.unsplash.com/photo-1542801204-141ec23989d7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi et voluptas
+                    voluptatibus reiciendis? Corrupti, rerum? Aut voluptates quasi quisquam? Adipisci ipsam explicabo
+                    officia quod sed qui perspiciatis tempore nam quam. Cumque sequi fugiat, quam architecto
+                    necessitatibus ab expedita quod veniam quibusdam dolorem magni saepe dolore illum iste recusandae
+                    consequuntur blanditiis dolor beatae ducimus debitis excepturi facere aperiam illo eius? Commodi
+                    necessitatibus omnis quia temporibus, labore et incidunt iure minima, dicta molestias unde tempore
+                    perferendis, quo obcaecati! Nesciunt est totam sequi omnis minus ex perspiciatis magnam natus. Illum
+                    molestias velit qui explicabo fugit impedit hic odio repellendus provident! Exercitationem facilis
+                    quaerat recusandae aut rerum, eum natus eaque corporis quasi minus culpa doloribus ex magni deleniti
+                    sequi et. Optio vero expedita eius ducimus beatae distinctio impedit eaque, ullam, enim qui tempora
+                    similique perferendis deserunt hic alias ad sapiente aspernatur magni obcaecati, aliquam nisi fugiat
+                    magnam. Officiis aliquam possimus eveniet quae provident reiciendis atque debitis neque corrupti
+                    modi rem consequuntur cumque in quibusdam autem, optio asperiores! Quasi culpa alias beatae
+                    voluptates itaque adipisci ab numquam laborum aspernatur praesentium quod harum, eum cupiditate,
+                    laudantium voluptatibus nobis incidunt amet sint excepturi, atque suscipit est illo officiis?
+                    Ratione iste commodi, veniam explicabo dolore numquam soluta unde!</p>
+            </div>
+            <div id="right">
+                <h1>Our Members</h1>
+                <marquee direction="up">
+                    <img src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==" alt="none">
+                    <p>This is a book</p>
+                </marquee>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>Copyright&copy; 2024</h1>
+        </div>
+    </div>
+</body>
+
+</html>

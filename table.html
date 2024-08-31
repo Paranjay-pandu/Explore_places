@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        table{
+            border: 1px solid black;
+            width: 90%;
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <table border >
+        <tr>
+            <th colspan="4"><h1>Registration From</h1></th>
+        </tr>
+        <tr>
+            <th>Student Name:</th>
+            <td><input type="text" name="first" id="first" placeholder="First name"></td>
+            <td><input type="text" name="middle" id="middle" placeholder="middle name"></td>
+            <td><input type="text" name="Last" id="Last" placeholder="Last name"></td>
+        </tr>
+        <tr>
+            <th>Father's Name</th>
+            <td><input type="text" name="Father" id="Father" placeholder="Enter your Father's name"></td>
+            <td><b>Mother's Name</b></td>
+            <td><input type="text" name="Mother" id="Mother" placeholder="Enter your Mother's name"></td>
+        </tr>
+        <tr>
+            <th>Date of Birth:</th>
+            <td><input type="date" name="dob" id="dob"></td>
+            <td><b>Gender:</b></td>
+            <td><input type="radio" name="Male" id="Male">Male<input type="radio" name="Female" id="Female">Female</td>
+        </tr>
+        <tr>
+            <th>Category:</th>
+            <td>
+                <input type="radio" name="GEN" id="GEN">GEN
+                <input type="radio" name="OBC" id="OBC">OBC
+                <input type="radio" name="CT" id="CT">SC/ST
+            </td>
+            <td><b>Handicapped:</b></td>
+            <td>
+                <input type="radio" name="yes" id="hyes">Yes
+                <input type="radio" name="No" id="hNo">No
+            </td>
+        </tr>
+        <tr>
+            <th>Ex-Servicon</th>
+            <td>
+                <input type="radio" name="yes" id="hyes">Yes
+                <input type="radio" name="No" id="hNo">No
+            </td>
+            <td><b>EWS</b></td>
+            <td>
+                <input type="radio" name="yes" id="hyes">Yes
+                <input type="radio" name="No" id="hNo">No
+            </td>
+        </tr>
+        <tr>
+            <th>Email ID:</th>
+            <td><input placeholder="Enter the Mail id" type="email" name="Email" id="Email"></td>
+            <td><b>Mobile No.</b></td>
+            <td><input placeholder="Enter your Mobile no." type="number" name="Mobile" id="Mobile"></td>
+        </tr>
+        <tr>
+            <th>State:</th>
+            <td>
+                <select name="State" id="State" value="Select State">
+                    <option value="#">Select The state</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="TamilNadu">TamilNadu</option>
+                    <option value="Kerala">Kerala</option>
+                </select>
+            </td>
+            <td><b>City:</b></td>
+            <td>
+                <select name="State" id="State" value="Select State">
+                    <option value="#">Select The City</option>
+                    <option value="Karnataka">Bengaluru</option>
+                    <option value="Telangana">Hyderabad</option>
+                    <option value="TamilNadu">Amaravati</option>
+                    <option value="Kerala">Delhi</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
+    </table>
+</body>
+</html>

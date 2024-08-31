@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #main{
+            background-image: url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #main #login{
+            background-color: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(20px);
+            height: 60vh;
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+        #login h1{
+            text-transform: uppercase;
+            margin: 30px;
+        }
+        #login input{
+            margin: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black
+        }
+        .btn{
+            background-color: orange;
+            border: 1px solid rgba(0, 0, 0, 0.68);
+            padding: 10px 60px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <form id="login">
+            <h1>Login Page</h1>
+            <div id="email">
+                
+            <label for="email">Email:</label>
+            <input type="email" class="email" placeholder="Enter your email" required>
+            </div>
+            <div id="pass">
+                
+            <label for="pass">password:</label>
+            <input type="password" class="pass" placeholder="Enter the password" required>
+            </div>
+            <div id="terms">
+            <input type="checkbox" name="terms" id="terms" required><p>Do you agree (terms and conditions)</p>
+            </div>
+            <button class="btn" type="submit">Login</button>
+        </form>
+    </div>
+    
+</body>
+</html>

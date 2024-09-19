@@ -14,7 +14,7 @@ document.addEventListener("mousemove", (dets) => {
 const buttons = document.querySelectorAll(".btn")
 buttons.forEach((button) => {
     button.addEventListener("mouseenter", () => {
-        cursor.innerHTML = `see<br> more`
+        cursor.innerHTML = see<br> more
         gsap.to("#cursor", {
             scale: 4,
             opacity: 0.7,
@@ -31,49 +31,69 @@ buttons.forEach((button) => {
 
 let loading = document.querySelector("#loading")
 
-document.addEventListener("DOMContentLoaded", () => {
-    const tl = gsap.timeline()
+document.addEventListener("DOMContentLoaded", () => {   
     const elem = document.createElement("h1")
     elem.style.cssText = `
         z-index: 10;
     `
-    elem.innerHTML = `Wanna explore Places??`
+    elem.innerHTML = Wanna explore Places??
     let letters = elem.innerHTML.split("")
     elem.innerHTML = ""
     letters.map((letter) => {
         let s = document.createElement("span")
-        s.innerHTML = `${letter}`
+        s.style.color = "white"
+        s.innerHTML = ${letter}
         elem.appendChild(s)
     })
     loading.appendChild(elem)
     console.log(loading)
-    tl.to("#loading h1 span", {
-        color: "white",
-        y: 10,  
-        delay: 0.5,
-        stagger: 0.03,
-        opacity: 0.8,
-        yoyo: true,
+    ta(true)
+})
+
+loading.addEventListener("click", ()=>{
+    gsap.to("#loading *", {
+        opacity: 0,
+        duration: 1
     })
-    tl.to("#loading h1 span", {
+    la()
+    loading.style.pointerEvents = "none"
+})
+
+function ta(f){
+
+    const tl = gsap.timeline({
+        repeat: -1
+    })
+    
+    tl.from("#loading h1 span", {
+        y:-10,  
+        delay: 0.5,
+        duration: 1,
         stagger: 0.03,
         opacity: 0,
-        yoyo: true,
+    }, "anim1")
+    tl.to("#loading h1 span", {
+        stagger: 0.03,
+        duration: 3,
+        opacity: 0,
+        delay: 0.8
+    }, "anim1")
+}
+
+function la(){
+
+    let gl = gsap.timeline({
     })
-    tl.to(loading, {
+    gl.to(loading, {
         delay: 0.5,
         opacity: 0, 
         duration: 2,
     }, "anim")
-    tl.to(loading, {
+    gl.to(loading, {
        display: "none"
     })
-    tl.from("#main *", {
+    gl.from("#main *", {
         y:"10%",
         duration: 1.5,
     }, "anim")
-})
-
-(()=>{
-
-})()
+}
